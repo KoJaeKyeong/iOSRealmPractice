@@ -90,6 +90,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ziv-zA-WlY" secondAttribute="trailing" constant="20" id="zRB-Nz-5gs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="directorTextField" destination="MqJ-uM-o2A" id="V04-Pn-AwQ"/>
+                        <outlet property="titleTextField" destination="5al-lB-anI" id="cnQ-zt-Cax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
