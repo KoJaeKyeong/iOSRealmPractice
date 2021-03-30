@@ -17,77 +17,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="감독이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-uM-o2A">
-                                <rect key="frame" x="20" y="86" width="193" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="kdG-WE-Ipn"/>
-                                    <constraint firstAttribute="width" secondItem="MqJ-uM-o2A" secondAttribute="height" multiplier="193:34" id="wTs-2T-jL9"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="84" width="181" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwE-eV-poj">
-                                <rect key="frame" x="230" y="46" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="J4E-4S-p1o"/>
-                                </constraints>
+                                <rect key="frame" x="209" y="45" width="88" height="30"/>
                                 <state key="normal" title="추가">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jeg-Cq-CJh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziv-zA-WlY">
-                                <rect key="frame" x="315" y="46" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="uzV-hl-uEX"/>
-                                </constraints>
+                                <rect key="frame" x="293" y="45" width="88" height="30"/>
                                 <state key="normal" title="삭제">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-hR-dDc">
-                                <rect key="frame" x="315" y="88" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="OR9-mE-M0v"/>
-                                </constraints>
-                                <state key="normal" title="갱신">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
+                                <connections>
+                                    <action selector="deleteData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luz-ne-XqL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk0-Ux-Kjg">
-                                <rect key="frame" x="228" y="88" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="mAR-Gq-wCB"/>
-                                </constraints>
+                                <rect key="frame" x="209" y="85" width="88" height="30"/>
                                 <state key="normal" title="조회">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="readData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Npb-Bp-daW"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영화제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5al-lB-anI">
-                                <rect key="frame" x="20" y="44" width="193" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="dmX-MS-vK8"/>
-                                    <constraint firstAttribute="width" secondItem="5al-lB-anI" secondAttribute="height" multiplier="193:34" id="g0T-qW-FpQ"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="44" width="181" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-hR-dDc">
+                                <rect key="frame" x="293" y="85" width="88" height="30"/>
+                                <state key="normal" title="갱신">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTv-Ol-kJW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ukx-hR-dDc" secondAttribute="trailing" constant="20" id="0So-Pg-N1E"/>
-                            <constraint firstItem="BwE-eV-poj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="6Rc-bn-UfE"/>
-                            <constraint firstItem="BwE-eV-poj" firstAttribute="leading" secondItem="5al-lB-anI" secondAttribute="trailing" constant="17" id="9oF-C5-A2O"/>
-                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="top" secondItem="BwE-eV-poj" secondAttribute="bottom" constant="12" id="GxX-Be-jMU"/>
-                            <constraint firstItem="5al-lB-anI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HL9-ft-YNL"/>
-                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="leading" secondItem="BwE-eV-poj" secondAttribute="trailing" constant="6" id="IgZ-u0-B66"/>
-                            <constraint firstItem="5al-lB-anI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OvW-Kl-k7t"/>
-                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="leading" secondItem="Yk0-Ux-Kjg" secondAttribute="trailing" constant="8" symbolic="YES" id="Vlt-Ft-qqL"/>
-                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a2K-Ge-HUw"/>
-                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="top" secondItem="Ziv-zA-WlY" secondAttribute="bottom" constant="12" id="bBF-of-kIT"/>
-                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="top" secondItem="5al-lB-anI" secondAttribute="bottom" constant="8" symbolic="YES" id="guK-Sv-MEs"/>
-                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="leading" secondItem="MqJ-uM-o2A" secondAttribute="trailing" constant="15" id="gxF-R1-2mO"/>
-                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="kIR-JU-70G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ziv-zA-WlY" secondAttribute="trailing" constant="20" id="zRB-Nz-5gs"/>
+                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="2Hd-KD-ULM"/>
+                            <constraint firstItem="BwE-eV-poj" firstAttribute="leading" secondItem="5al-lB-anI" secondAttribute="trailing" constant="8" symbolic="YES" id="4hI-Ne-6tK"/>
+                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="leading" secondItem="Yk0-Ux-Kjg" secondAttribute="trailing" constant="-4" id="6sO-2R-D4F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ukx-hR-dDc" secondAttribute="trailing" constant="33" id="9bR-5n-hZM"/>
+                            <constraint firstItem="5al-lB-anI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.437198" id="A1n-oT-YF2"/>
+                            <constraint firstItem="BwE-eV-poj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="EYS-8z-32o"/>
+                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0357143" id="Fce-GU-KS0"/>
+                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="leading" secondItem="MqJ-uM-o2A" secondAttribute="trailing" constant="8" symbolic="YES" id="KMd-5T-hrW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ziv-zA-WlY" secondAttribute="trailing" constant="33" id="LP4-9z-hTJ"/>
+                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="leading" secondItem="BwE-eV-poj" secondAttribute="trailing" constant="-4" id="NAN-bw-uyw"/>
+                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.437198" id="Ts4-Bd-uPB"/>
+                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="Ufy-WG-Cax"/>
+                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.21256" id="Wzl-cL-ZEo"/>
+                            <constraint firstItem="5al-lB-anI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y1v-e7-Zfq"/>
+                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="top" secondItem="BwE-eV-poj" secondAttribute="bottom" constant="10" id="YWj-OY-dcY"/>
+                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="top" secondItem="Ziv-zA-WlY" secondAttribute="bottom" constant="10" id="eCW-Q7-omY"/>
+                            <constraint firstItem="BwE-eV-poj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="gFe-id-HCH"/>
+                            <constraint firstItem="Yk0-Ux-Kjg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="gi0-cx-Y2S"/>
+                            <constraint firstItem="5al-lB-anI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iew-GU-pHS"/>
+                            <constraint firstItem="BwE-eV-poj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.21256" id="ihx-Dv-rgP"/>
+                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="top" secondItem="5al-lB-anI" secondAttribute="bottom" constant="8" symbolic="YES" id="o7I-2n-7YZ"/>
+                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.21256" id="o8K-ba-JDY"/>
+                            <constraint firstItem="Ukx-hR-dDc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.21256" id="rVM-53-NSx"/>
+                            <constraint firstItem="Ziv-zA-WlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="uA8-ju-yNz"/>
+                            <constraint firstItem="5al-lB-anI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0357143" id="uao-br-a88"/>
+                            <constraint firstItem="MqJ-uM-o2A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xWH-Mk-C2p"/>
                         </constraints>
                     </view>
                     <connections>
